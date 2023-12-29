@@ -33,6 +33,19 @@ You will be able to locate the highly detailed (HLD) and low-level design (LLD) 
 
 **Print Available Activities:** See a list of activities with available spaces at each destination.
 
+## In terms of SOLID principles:
+
+
+**Single Responsibility Principle (SRP):** Each class has a single responsibility and performs a specific set of actions.
+
+**Open/Closed Principle (OCP):** The code is open for extension (e.g., adding new passenger types) but closed for modification.
+
+**Liskov Substitution Principle (LSP):** The subclasses (StandardPassenger, GoldPassenger, PremiumPassenger) can be used interchangeably with the base class (Passenger).
+
+**Interface Segregation Principle (ISP):** The SignupStrategies interface defines a specific method for signing up for an activity, which is implemented by the concrete strategy classes.
+
+**Dependency Inversion Principle (DIP):** The high-level modules (Client, TravelPackageController) depend on abstractions (interfaces) rather than concrete implementations.
+
 # Dependencies
 The project uses Java and does not have external dependencies beyond the standard Java libraries.
 
