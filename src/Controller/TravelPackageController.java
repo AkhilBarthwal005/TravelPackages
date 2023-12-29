@@ -1,6 +1,7 @@
 package Controller;
 
 import exception.ActivityAlreadyExistException;
+import exception.InvalidActivityNumberException;
 import model.Destination;
 import model.TravelPackage;
 
@@ -78,7 +79,7 @@ public class TravelPackageController {
      *
      * @param travelPackage The travel package in which the activity will be booked.
      */
-    public void bookActivity(TravelPackage travelPackage) {
+    public void bookActivity(TravelPackage travelPackage) throws InvalidActivityNumberException {
         travelPackage.bookActivity();
     }
 

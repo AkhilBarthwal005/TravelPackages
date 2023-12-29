@@ -1,12 +1,13 @@
 import Controller.TravelPackageController;
 import exception.ActivityAlreadyExistException;
+import exception.InvalidActivityNumberException;
 import model.*;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class Client {
-    public static void main(String[] args) throws ActivityAlreadyExistException {
+    public static void main(String[] args) throws ActivityAlreadyExistException, InvalidActivityNumberException {
         // Client journey starts here
         TravelPackageController travelPackageController = new TravelPackageController();
         Scanner sc = new Scanner(System.in);

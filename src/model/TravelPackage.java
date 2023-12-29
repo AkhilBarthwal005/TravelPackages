@@ -1,6 +1,7 @@
 package model;
 
 import exception.ActivityAlreadyExistException;
+import exception.InvalidActivityNumberException;
 
 import java.util.*;
 /**
@@ -165,7 +166,7 @@ public class TravelPackage {
      * Method to book activities for passengers in the travel package.
      */
 
-    public void bookActivity() {
+    public void bookActivity() throws InvalidActivityNumberException {
             Destination destination = getItinerary().stream().findFirst().orElse(null);
             assert destination != null;
         destination.bookActivity(getPassengers());

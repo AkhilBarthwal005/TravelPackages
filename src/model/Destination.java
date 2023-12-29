@@ -1,5 +1,7 @@
 package model;
 
+import exception.InvalidActivityNumberException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -68,7 +70,7 @@ public class Destination {
      * @param passengers List of passengers for whom activities are booked.
      */
 
-    public void bookActivity(List<Passenger> passengers) {
+    public void bookActivity(List<Passenger> passengers) throws InvalidActivityNumberException {
         System.out.println("---------------------------------------------------------------------");
         boolean flag = true;
         Scanner sc = new Scanner(System.in);
@@ -80,7 +82,9 @@ public class Destination {
             sc.nextLine();// to handle extra space which come in the form of enter when user try to input details from console
             Activity activity = this.getActivities().stream().filter(a -> a.getId() == activity_number).findFirst().orElse(null);
             Passenger passenger = passengers.stream().filter(p -> p.getNumber() == passenger_number).findFirst().orElse(null);
-            assert activity != null;
+            if(activity == null){
+                throw new InvalidActivityNumberException("Please provide correct activity id");
+            }
             flag = activity.bookActivity(flag, activity, passenger);
         }
         System.out.println("---------------------------------------------------------------------");
