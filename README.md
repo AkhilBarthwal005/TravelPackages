@@ -14,6 +14,12 @@ This is a simple Java-based travel package booking system that enables users to 
 
 4. Follow the instructions in the console to create a travel package, add passengers, and book activities.
 
+##Note: Running Test Cases
+For running test cases, ensure you have added the external JUnit JAR to your classpath. Since this is a simple Java project and not a Spring Boot project, the JUnit library needs to be included separately for testing.
+
+### Diagrams
+You will be able to locate the highly detailed (HLD) and low-level design (LLD) diagrams for this project, which provide a comprehensive visual representation of the project's architecture and components, inside the src folder.
+
 # Features
 **Create Travel Package:** Create a travel package with a specified name, capacity, and itinerary (list of destinations with associated activities).
 
