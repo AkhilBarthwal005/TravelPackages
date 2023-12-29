@@ -4,18 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eb8ca8c-ad13-47ce-94d6-e0b9ad2ff320" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travelpackages.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Destination.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/TravelPackage.java" afterDir="false" />
+    <list default="true" id="5eb8ca8c-ad13-47ce-94d6-e0b9ad2ff320" name="Changes" comment="project init">
+      <change afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TravelPackageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exception/ActivityAlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/factory/SignupFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Activities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/PassengerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/GoldPassengerStrategies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/PremiumPassengerStrategies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/SignupStrategies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/StandardPassengerStrategies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Destination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GoldPassenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GoldPassenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PremiumPassenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PremiumPassenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/StandardPassenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StandardPassenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TravelPackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TravelPackage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -41,17 +50,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="exception" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client" />
+      <module name="Travelpackages" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,8 +89,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703734102215</updated>
-      <workItem from="1703734104274" duration="674000" />
+      <workItem from="1703734104274" duration="1238000" />
+      <workItem from="1703735354741" duration="17409000" />
+      <workItem from="1703784004553" duration="3000" />
+      <workItem from="1703818827668" duration="9093000" />
     </task>
+    <task id="LOCAL-00001" summary="project init">
+      <created>1703735107033</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703735107033</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,5 +117,25 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project init" />
+    <option name="LAST_COMMIT_MESSAGE" value="project init" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/TravelPackage.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/strategy/StandardPassengerStrategies.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

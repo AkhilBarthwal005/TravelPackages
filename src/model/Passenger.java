@@ -1,11 +1,18 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Passenger {
     private String name;
     private int number;
     private List<Activity> activities;
+
+    public Passenger(String name, int number) {
+        this.name = name;
+        this.number = number;
+        activities = new ArrayList<>();
+    }
 
     public String getName() {
         return name;
@@ -31,5 +38,7 @@ public abstract class Passenger {
         this.activities = activities;
     }
 
-    public abstract boolean bookActivity(Activity activity);
+    public abstract void signUpForActivity(Activity activity,Passenger passenger);
+
+    public abstract void printPassengerDetails();
 }

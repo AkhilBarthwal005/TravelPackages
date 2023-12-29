@@ -6,6 +6,10 @@ public class Destination {
     private String name;
     private List<Activity> activities;
 
+    public Destination(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

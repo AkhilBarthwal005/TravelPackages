@@ -1,18 +1,39 @@
 package model;
 
 public class Activity {
-    private String name;
+
+    private int id;
+    private Activities name;
     private String description;
     private double cost;
     private int capacity;
     private int availableSpace;
     private Destination destination;
 
-    public String getName() {
+    public Activity(int id,Activities name, String description, double cost, int capacity, Destination destination) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.cost = cost;
+        this.capacity = capacity;
+        this.availableSpace = capacity;
+        this.destination = destination;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Activity setId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public Activities getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(Activities name) {
         this.name = name;
     }
 
