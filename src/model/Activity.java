@@ -1,5 +1,8 @@
 package model;
 
+import java.util.List;
+import java.util.Scanner;
+
 public class Activity {
 
     private int id;
@@ -9,6 +12,8 @@ public class Activity {
     private int capacity;
     private int availableSpace;
     private Destination destination;
+
+    Scanner sc = new Scanner(System.in);
 
     public Activity(int id,Activities name, String description, double cost, int capacity, Destination destination) {
         this.id = id;
@@ -75,5 +80,22 @@ public class Activity {
 
     public void setDestination(Destination destination) {
         this.destination = destination;
+    }
+
+    public  boolean bookActivity(boolean flag, Activity activity, Passenger passenger) {
+        if(passenger == null || activity == null){
+            System.out.println("you have provide a invalid passenger number or Invalid Activity number");
+            System.out.println("---- Please try again -----");
+            return flag;
+        }
+
+        passenger.signUpForActivity(activity,passenger);
+        System.out.println("Do you want to book another Activity");
+        String input = sc.nextLine();
+        if(input.equalsIgnoreCase("N")){
+            flag = false;
+            System.out.println("Thanks for booking with us have a Happy Activity :) Thank you");
+        }
+        return flag;
     }
 }

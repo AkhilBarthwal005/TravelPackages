@@ -138,33 +138,9 @@ public class TravelPackage {
     }
 
     public void bookActivity() {
-        System.out.println("---------------------------------------------------------------------");
-        boolean flag = true;
-        while (flag){
-            System.out.println("Please provide passenger Number for which you want to book activity");
-            int passenger_number = sc.nextInt();
-            System.out.println("Please provide Activity Number which you want to book");
-            int activity_number = sc.nextInt();
-            sc.nextLine();
             Destination destination = getItinerary().stream().findFirst().orElse(null);
             assert destination != null;
-            Activity activity = destination.getActivities().stream().filter(a -> a.getId() == activity_number).findFirst().orElse(null);
-            Passenger passenger = getPassengers().stream().filter(p -> p.getNumber() == passenger_number).findFirst().orElse(null);
-            if(passenger == null || activity == null){
-                System.out.println("you have provide a invalid passenger number or Invalid Activity number");
-                System.out.println("---- Please try again -----");
-                continue;
-            }
-
-            passenger.signUpForActivity(activity,passenger);
-            System.out.println("Do you want to book another Activity");
-            String input = sc.nextLine();
-            if(input.equalsIgnoreCase("N")){
-                flag = false;
-                System.out.println("Thanks for booking with us have a Happy Activity :) Thank you");
-            }
-        }
-        System.out.println("---------------------------------------------------------------------");
+        destination.bookActivity(getPassengers());
     }
 
     public void printIndividualPassengerDetails() {
@@ -172,25 +148,7 @@ public class TravelPackage {
     }
 
     public void printAvailableActivities() {
-        System.out.println("---------------------------------------------------------------------");
-        System.out.println("------Here are the details of activities with available spaces-------");
-        getItinerary().forEach(destination -> {
-            System.out.println("Destination Name - " + destination.getName());
-
-            List<Activity> availableActivities = destination.getActivities().stream()
-                    .filter(activity -> activity.getCapacity() > 0).toList();
-
-            availableActivities.forEach(activity -> {
-                System.out.println("**********************************************************");
-                System.out.println("  Activity Name - ||    " + activity.getName());
-                System.out.println("  Cost - || " + activity.getCost());
-                System.out.println("  Capacity - || " + activity.getCapacity());
-                System.out.println("  Available Spaces - || " + activity.getAvailableSpace());
-                System.out.println("  Description - ||  " + activity.getDescription());
-            });
-        });
-
-        System.out.println("---------------------------------------------------------------------");
+        getItinerary().forEach(Destination::printAvailableActivities);
     }
 
 
