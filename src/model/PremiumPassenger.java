@@ -2,21 +2,38 @@ package model;
 
 import factory.SignupFactory;
 
-import java.util.List;
+/**
+ * A class representing a premium passenger in the travel package booking system.
+ * Premium passengers have a name, number, and can sign up for activities for free.
+ */
 
 public class PremiumPassenger extends Passenger{
 
+    /**
+     * Constructor to initialize a premium passenger with a name and number.
+     *
+     * @param name   Name of the premium passenger.
+     * @param number Passenger number.
+     */
 
     public PremiumPassenger(String name, int number) {
         super(name, number);
     }
 
-    // Method to sign up for an activity
+    /**
+     * Method to sign up a premium passenger for an activity.
+     *
+     * @param activity  Activity to sign up for.
+     * @param passenger Passenger signing up for the activity.
+     */
     @Override
     public void signUpForActivity(Activity activity,Passenger passenger) {
       SignupFactory.getSignupActivityByPassengerType(PassengerType.PREMIUM).signUpForActivity(activity,passenger);
     }
 
+    /**
+     * Method to print details of a premium passenger, including the activities they have enrolled in.
+     */
     @Override
     public void printPassengerDetails() {
         System.out.println("---------------------------------------------------------------------");

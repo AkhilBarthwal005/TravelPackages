@@ -6,7 +6,17 @@ import model.StandardPassenger;
 
 import java.util.List;
 
+/**
+ * A strategy class for handling the sign-up process of StandardPassenger for activities.
+ */
 public class StandardPassengerStrategies implements SignupStrategies{
+
+    /**
+     * Signs up a StandardPassenger for a specific activity based on certain conditions.
+     *
+     * @param activity  The activity to sign up for.
+     * @param passenger The StandardPassenger signing up for the activity.
+     */
     @Override
     public void signUpForActivity(Activity activity, Passenger passenger) {
         // Check if the activity is not null and the passenger is not already enrolled

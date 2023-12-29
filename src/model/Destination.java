@@ -4,14 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Represents a destination in a travel package itinerary.
+ * Each destination has a name and a list of activities available at that destination.
+ */
+
 public class Destination {
     private String name;
     private List<Activity> activities;
 
+    /**
+     * Constructor to initialize the destination with a name.
+     *
+     * @param name Name of the destination.
+     */
     public Destination(String name) {
         this.name = name;
         this.activities = new ArrayList<>();
     }
+
+    // Getters and setters for various attributes...
 
     public String getName() {
         return name;
@@ -29,6 +41,9 @@ public class Destination {
         this.activities = activities;
     }
 
+    /**
+     * Prints details of activities with available spaces at this destination.
+     */
 
     public void printAvailableActivities() {
         System.out.println("---------------------------------------------------------------------");
@@ -47,6 +62,12 @@ public class Destination {
         System.out.println("---------------------------------------------------------------------");
     }
 
+    /**
+     * Allows booking activities for passengers at this destination.
+     *
+     * @param passengers List of passengers for whom activities are booked.
+     */
+
     public void bookActivity(List<Passenger> passengers) {
         System.out.println("---------------------------------------------------------------------");
         boolean flag = true;
@@ -56,9 +77,7 @@ public class Destination {
             int passenger_number = sc.nextInt();
             System.out.println("Please provide Activity Number which you want to book");
             int activity_number = sc.nextInt();
-            sc.nextLine();
-//            Destination destination = getItinerary().stream().findFirst().orElse(null);
-//            assert destination != null;
+            sc.nextLine();// to handle extra space which come in the form of enter when user try to input details from console
             Activity activity = this.getActivities().stream().filter(a -> a.getId() == activity_number).findFirst().orElse(null);
             Passenger passenger = passengers.stream().filter(p -> p.getNumber() == passenger_number).findFirst().orElse(null);
             assert activity != null;

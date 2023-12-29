@@ -2,16 +2,30 @@ package model;
 
 import factory.SignupFactory;
 
-import java.util.List;
+
+/**
+ * Represents a Gold passenger in the travel package booking system.
+ * Gold passengers have a balance and receive a 10% discount on activity costs.
+ */
 
 public class GoldPassenger extends Passenger{
 
     private double balance;
 
+    /**
+     * Constructor to initialize a Gold passenger with a name, number, and balance.
+     *
+     * @param name    Name of the Gold passenger.
+     * @param number  Passenger number.
+     * @param balance Initial balance of the Gold passenger.
+     */
+
     public GoldPassenger(String name, int number, double balance) {
         super(name, number);
         this.balance = balance;
     }
+
+    // Getter and setter for balance...
 
     public double getBalance() {
         return balance;
@@ -21,11 +35,21 @@ public class GoldPassenger extends Passenger{
         this.balance = balance;
     }
 
+
+    /**
+     * Overrides the method to sign up for an activity with Gold passenger-specific behavior.
+     *
+     * @param activity  Activity to sign up for.
+     * @param passenger Passenger signing up for the activity.
+     */
     @Override
     public void signUpForActivity(Activity activity,Passenger passenger) {
         SignupFactory.getSignupActivityByPassengerType(PassengerType.GOLD).signUpForActivity(activity,passenger);
     }
 
+    /**
+     * Overrides the method to print details specific to Gold passengers.
+     */
     @Override
     public void printPassengerDetails() {
         System.out.println("---------------------------------------------------------------------");
@@ -43,6 +67,13 @@ public class GoldPassenger extends Passenger{
         }
         System.out.println("---------------------------------------------------------------------");
     }
+
+    /**
+     * Calculates and returns the discount amount for Gold passengers.
+     *
+     * @param activity Activity for which the discount is calculated.
+     * @return Discount amount.
+     */
     public double getDiscount(Activity activity) {
         return activity.getCost()*0.1; // 10% discount for gold passengers
     }

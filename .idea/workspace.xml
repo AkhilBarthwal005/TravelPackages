@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eb8ca8c-ad13-47ce-94d6-e0b9ad2ff320" name="Changes" comment="project init">
-      <change afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/TravelPackageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exception/ActivityAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/factory/SignupFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Activities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/PassengerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/GoldPassengerStrategies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/PremiumPassengerStrategies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/SignupStrategies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/StandardPassengerStrategies.java" afterDir="false" />
+    <list default="true" id="5eb8ca8c-ad13-47ce-94d6-e0b9ad2ff320" name="Changes" comment="HLD and LLD diagram are added">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_13_2_javadoc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-4.13.2-javadoc.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Travelpackages.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Travelpackages.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TravelPackageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TravelPackageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/ActivityAlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exception/ActivityAlreadyExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factory/SignupFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factory/SignupFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Activity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Destination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destination.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GoldPassenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GoldPassenger.java" afterDir="false" />
@@ -24,6 +20,11 @@
       <change beforePath="$PROJECT_DIR$/src/model/PremiumPassenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PremiumPassenger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/StandardPassenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StandardPassenger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TravelPackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TravelPackage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategy/GoldPassengerStrategies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/GoldPassengerStrategies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategy/PremiumPassengerStrategies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/PremiumPassengerStrategies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategy/SignupStrategies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/SignupStrategies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategy/StandardPassengerStrategies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/StandardPassengerStrategies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TravelPackageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TravelPackageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,22 +53,36 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/akhilbarthwal/Desktop/Akhil/Spring Framework/Travelpackages/src&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.38850576&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="exception" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="Travelpackages" />
@@ -75,9 +90,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TravelPackageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Travelpackages" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java" />
+      <option name="MAIN_CLASS_NAME" value="test.java.TravelPackageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TravelPackageTest.printAvailableActivities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Travelpackages" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java" />
+      <option name="MAIN_CLASS_NAME" value="test.java.TravelPackageTest" />
+      <option name="METHOD_NAME" value="printAvailableActivities" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TravelPackageTest.testAddPassenger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Travelpackages" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java" />
+      <option name="MAIN_CLASS_NAME" value="test.java.TravelPackageTest" />
+      <option name="METHOD_NAME" value="testAddPassenger" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TravelPackageTest.testSignUpForActivity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Travelpackages" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java" />
+      <option name="MAIN_CLASS_NAME" value="test.java.TravelPackageTest" />
+      <option name="METHOD_NAME" value="testSignUpForActivity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Client" />
+        <item itemvalue="JUnit.TravelPackageTest" />
+        <item itemvalue="JUnit.TravelPackageTest.printAvailableActivities" />
+        <item itemvalue="JUnit.TravelPackageTest.testSignUpForActivity" />
+        <item itemvalue="JUnit.TravelPackageTest.testAddPassenger" />
       </list>
     </recent_temporary>
   </component>
@@ -92,7 +174,7 @@
       <workItem from="1703734104274" duration="1238000" />
       <workItem from="1703735354741" duration="17409000" />
       <workItem from="1703784004553" duration="3000" />
-      <workItem from="1703818827668" duration="9093000" />
+      <workItem from="1703818827668" duration="23693000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1703735107033</created>
@@ -101,7 +183,35 @@
       <option name="project" value="LOCAL" />
       <updated>1703735107033</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Working project completed with given requirement and need to add unit test case for it">
+      <created>1703828277915</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703828277915</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactor the code with respect to SRP">
+      <created>1703840054015</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703840054015</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Junit test case added">
+      <created>1703840079214</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703840079214</updated>
+    </task>
+    <task id="LOCAL-00005" summary="HLD and LLD diagram are added">
+      <created>1703843870514</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703843870514</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,19 +230,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project init" />
-    <option name="LAST_COMMIT_MESSAGE" value="project init" />
+    <MESSAGE value="Working project completed with given requirement and need to add unit test case for it" />
+    <MESSAGE value="refactor the code with respect to SRP" />
+    <MESSAGE value="Junit test case added" />
+    <MESSAGE value="HLD and LLD diagram are added" />
+    <option name="LAST_COMMIT_MESSAGE" value="HLD and LLD diagram are added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/TravelPackage.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/strategy/StandardPassengerStrategies.java</url>
-          <line>21</line>
+          <line>31</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

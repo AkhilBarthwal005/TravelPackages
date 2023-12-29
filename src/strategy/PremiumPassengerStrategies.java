@@ -5,7 +5,16 @@ import model.Passenger;
 
 import java.util.List;
 
+/**
+ * A strategy class for handling the sign-up process of PremiumPassenger for activities.
+ */
 public class PremiumPassengerStrategies implements SignupStrategies{
+    /**
+     * Signs up a PremiumPassenger for a specific activity based on certain conditions.
+     *
+     * @param activity  The activity to sign up for.
+     * @param passenger The PremiumPassenger signing up for the activity.
+     */
     @Override
     public void signUpForActivity(Activity activity, Passenger passenger) {
         // Check if the activity is not null and the passenger is not already enrolled

@@ -3,7 +3,10 @@ package model;
 import exception.ActivityAlreadyExistException;
 
 import java.util.*;
-
+/**
+ * A class representing a travel package in the travel package booking system.
+ * Each travel package has a name, capacity, itinerary, and a list of passengers.
+ */
 public class TravelPackage {
     private String name;
     private int capacity;
@@ -11,12 +14,23 @@ public class TravelPackage {
     private List<Passenger> passengers;
 
     Scanner sc = new Scanner(System.in);
+
+    /**
+     * Private constructor to create a TravelPackage instance.
+     *
+     * @param name      The name of the travel package.
+     * @param capacity  The capacity of the travel package.
+     * @param itinerary The list of destinations in the itinerary.
+     */
     private TravelPackage(String name, int capacity, List<Destination> itinerary) {
         this.name = name;
         this.capacity = capacity;
         this.itinerary = itinerary;
         this.passengers = new ArrayList<>();
     }
+
+    // Getter and setter methods for class attributes
+
 
     public String getName() {
         return name;
@@ -54,6 +68,9 @@ public class TravelPackage {
         return new Builder();
     }
 
+    /**
+     * Method to print the itinerary details of the travel package.
+     */
     public void printItinerary() {
         System.out.println("---------------------------------------------------------------------");
         System.out.println("------hear is the list of your package details-------");
@@ -77,6 +94,10 @@ public class TravelPackage {
         }
         System.out.println("---------------------------------------------------------------------");
     }
+
+    /**
+     * Method to add passengers to the travel package.
+     */
 
     public void addPassenger() {
         int spaceAvailable = capacity;
@@ -119,6 +140,10 @@ public class TravelPackage {
         System.out.println("---------------------------------------------------------------------");
     }
 
+    /**
+     * Method to print the list of passengers in the travel package.
+     */
+
     public void printPassengerList(){
 
         System.out.println("---------------------------------------------------------------------");
@@ -136,6 +161,9 @@ public class TravelPackage {
 
         System.out.println("---------------------------------------------------------------------");
     }
+    /**
+     * Method to book activities for passengers in the travel package.
+     */
 
     public void bookActivity() {
             Destination destination = getItinerary().stream().findFirst().orElse(null);
@@ -143,15 +171,24 @@ public class TravelPackage {
         destination.bookActivity(getPassengers());
     }
 
+    /**
+     * Method to print details of individual passengers in the travel package.
+     */
     public void printIndividualPassengerDetails() {
         passengers.forEach(Passenger::printPassengerDetails);
     }
 
+    /**
+     * Method to print details of available activities in the travel package.
+     */
     public void printAvailableActivities() {
         getItinerary().forEach(Destination::printAvailableActivities);
     }
 
 
+    /**
+     * Builder class for constructing TravelPackage instances.
+     */
 
     public static class Builder{
         private String name;
@@ -195,6 +232,13 @@ public class TravelPackage {
             return this;
         }
 
+        /**
+         * Method to build a TravelPackage instance.
+         *
+         * @return A TravelPackage instance.
+         * @throws ActivityAlreadyExistException If duplicate activities are found at destinations.
+         */
+
         public TravelPackage build() throws ActivityAlreadyExistException {
             // need to perform validation if required
             validActivityAtDestination();
@@ -203,7 +247,11 @@ public class TravelPackage {
 
 
 
-        // This code snippet checks if there are any duplicate activities at each destination in an itinerary. If duplicates are found, it throws an exception indicating the duplicate activity and the destination where it occurs.
+        /**
+         * Checks for duplicate activities at each destination in the itinerary.
+         *
+         * @throws ActivityAlreadyExistException If duplicates are found.
+         */
         private void validActivityAtDestination() throws ActivityAlreadyExistException {
             for (Destination destination : itinerary) {
                 Set<Activities> activitiesName = new HashSet<>();

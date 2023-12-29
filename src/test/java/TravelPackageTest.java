@@ -6,19 +6,23 @@ import model.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * This class contains unit tests for the TravelPackage class and its related functionality.
+ */
 public class TravelPackageTest {
     private TravelPackage travelPackage;
 
     private TravelPackageController travelPackageController;
 
-
+    /**
+     * Set up the test environment by creating a sample TravelPackage with a destination and activities.
+     *
+     * @throws ActivityAlreadyExistException If there is an issue with creating the activities.
+     */
     @BeforeEach
     void setUp() throws ActivityAlreadyExistException {
 
@@ -37,6 +41,11 @@ public class TravelPackageTest {
 
     }
 
+    /**
+     * Test the creation of a TravelPackage.
+     *
+     * @throws ActivityAlreadyExistException If there is an issue with creating the activities.
+     */
     @Test
     void testCreatePackage() throws ActivityAlreadyExistException {
 
@@ -47,11 +56,23 @@ public class TravelPackageTest {
         assertEquals(1, travelPackage.getItinerary().size());
     }
 
+    /**
+     * Test adding a passenger to the TravelPackage.
+     *
+     * @throws ActivityAlreadyExistException If there is an issue with creating the activities.
+     */
+
     @Test
     void testAddPassenger() throws ActivityAlreadyExistException {
 
         assertEquals(1, travelPackage.getPassengers().size());
     }
+
+    /**
+     * Test printing the itinerary of the TravelPackage.
+     *
+     * @throws ActivityAlreadyExistException If there is an issue with creating the activities.
+     */
 
     @Test
     void testPrintItinerary() throws ActivityAlreadyExistException {
@@ -59,7 +80,11 @@ public class TravelPackageTest {
         travelPackageController.printItinerary(travelPackage);
     }
 
-
+    /**
+     * Test signing up a passenger for an activity.
+     *
+     * @throws ActivityAlreadyExistException If there is an issue with creating the activities.
+     */
     @Test
     void testSignUpForActivity() throws ActivityAlreadyExistException {
         Passenger passenger = travelPackage.getPassengers().get(0);
@@ -73,6 +98,9 @@ public class TravelPackageTest {
         assertEquals(1, passenger.getActivities().size());
     }
 
+    /**
+     * Test building a TravelPackage with duplicate activities.
+     */
 
     @Test
     void testBuildTravelPackageWithDuplicateActivity() {

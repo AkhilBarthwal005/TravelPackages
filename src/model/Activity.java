@@ -1,7 +1,12 @@
 package model;
 
-import java.util.List;
 import java.util.Scanner;
+
+/**
+ * Represents an activity available in a travel package itinerary.
+ * Each activity has a unique identifier, name, description, cost, capacity,
+ * available space, and is associated with a specific destination.
+ */
 
 public class Activity {
 
@@ -15,6 +20,17 @@ public class Activity {
 
     Scanner sc = new Scanner(System.in);
 
+    /**
+     * Constructor to initialize the activity with provided details.
+     *
+     * @param id           Unique identifier for the activity.
+     * @param name         Name of the activity.
+     * @param description  Description of the activity.
+     * @param cost         Cost of the activity.
+     * @param capacity     Maximum capacity for the activity.
+     * @param destination  Destination where the activity takes place.
+     */
+
     public Activity(int id,Activities name, String description, double cost, int capacity, Destination destination) {
         this.id = id;
         this.name = name;
@@ -24,6 +40,8 @@ public class Activity {
         this.availableSpace = capacity;
         this.destination = destination;
     }
+
+    // Getters and setters for various attributes...
 
     public int getId() {
         return id;
@@ -82,19 +100,27 @@ public class Activity {
         this.destination = destination;
     }
 
-    public  boolean bookActivity(boolean flag, Activity activity, Passenger passenger) {
-        if(passenger == null || activity == null){
-            System.out.println("you have provide a invalid passenger number or Invalid Activity number");
+    /**
+     * Allows a passenger to book the activity and updates the available space.
+     *
+     * @param flag      Flag indicating whether the booking process should continue.
+     * @param activity  The activity to be booked.
+     * @param passenger The passenger booking the activity.
+     * @return True if the booking process should continue, false otherwise.
+     */
+    public boolean bookActivity(boolean flag, Activity activity, Passenger passenger) {
+        if (passenger == null || activity == null) {
+            System.out.println("You have provided an invalid passenger number or invalid activity number");
             System.out.println("---- Please try again -----");
             return flag;
         }
 
-        passenger.signUpForActivity(activity,passenger);
-        System.out.println("Do you want to book another Activity");
+        passenger.signUpForActivity(activity, passenger);
+        System.out.println("Do you want to book another activity?");
         String input = sc.nextLine();
-        if(input.equalsIgnoreCase("N")){
+        if (input.equalsIgnoreCase("N")) {
             flag = false;
-            System.out.println("Thanks for booking with us have a Happy Activity :) Thank you");
+            System.out.println("Thanks for booking with us. Have a happy activity! :) Thank you");
         }
         return flag;
     }
