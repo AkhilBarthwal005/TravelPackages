@@ -14,7 +14,7 @@ This is a simple Java-based travel package booking system that enables users to 
 
 4. Follow the instructions in the console to create a travel package, add passengers, and book activities.
 
-##Note: Running Test Cases
+### Note: Running Test Cases
 For running test cases, ensure you have added the external JUnit JAR to your classpath. Since this is a simple Java project and not a Spring Boot project, the JUnit library needs to be included separately for testing.
 
 ### Diagrams
@@ -25,7 +25,7 @@ You will be able to locate the highly detailed (HLD) and low-level design (LLD) 
 
 **Add Passengers:** Add passengers to the travel package. Passengers can be of three types: Standard, Gold, and Premium.
 
-**Book Activities:** Book activities for passengers in the travel package. The booking process includes checking available space, passenger balance, and applying discounts for Gold passengers.
+**Book Activities:** Book activities for passengers in the travel package. The booking process includes checking available space,  passenger balance, and applying discounts for Gold passengers.
 
 **Print Package Details:** View the details of the created travel package, including the itinerary, available activities, and passenger list.
 
