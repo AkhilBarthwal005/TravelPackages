@@ -33,7 +33,7 @@ You will be able to locate the highly detailed (HLD) and low-level design (LLD) 
 
 **Print Available Activities:** See a list of activities with available spaces at each destination.
 
-## In terms of SOLID principles:
+# In terms of SOLID principles:
 
 
 **Single Responsibility Principle (SRP):** Each class has a single responsibility and performs a specific set of actions.
